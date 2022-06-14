@@ -1,0 +1,14 @@
+[Unit]
+Description=Battery Management System
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/bmserver --config /etc/bmserver/bms.conf
+WorkingDirectory=/var/lib/bmserver
+StandardOutput=null
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

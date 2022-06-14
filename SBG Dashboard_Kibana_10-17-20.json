@@ -1,0 +1,332 @@
+[
+  {
+    "_id": "c2a2de00-0e9d-11eb-8082-3bea34c7e01d",
+    "_type": "index-pattern",
+    "_source": {
+      "title": "bmsnodeevent",
+      "timeFieldName": "eventTimestamp",
+      "fields": "[{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"bmsNode.id\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"current\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"estSoc\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"estSohC\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"estSohR\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"eventTimestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"id\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"voltage\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f7c22580-100c-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "SOH_C_Instant",
+      "visState": "{\"title\":\"SOH_C_Instant\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"metric\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"estSohC\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"SOH - Capacity (%)\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\",\"background_color_rules\":[{\"value\":90,\"id\":\"ab8b09c0-100c-11eb-b605-67b53a677a3b\",\"color\":\"rgba(69,255,0,1)\",\"operator\":\"gte\"},{\"value\":90,\"id\":\"d05c3d50-100c-11eb-b605-67b53a677a3b\",\"color\":\"rgba(255,133,0,1)\",\"operator\":\"lt\"}],\"filter\":\"\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "987e5440-100c-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "SOC_Instant",
+      "visState": "{\"title\":\"SOC_Instant\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"background_color_rules\":[{\"color\":\"rgba(255,0,0,1)\",\"id\":\"11a96c20-100c-11eb-b605-67b53a677a3b\",\"operator\":\"lt\",\"value\":20},{\"color\":\"rgba(0,255,50,1)\",\"id\":\"3f158900-100c-11eb-b605-67b53a677a3b\",\"operator\":\"gt\",\"value\":75}],\"bar_color_rules\":[{\"id\":\"babdc3f0-100d-11eb-b605-67b53a677a3b\"}],\"default_index_pattern\":\"bmsnodeevent\",\"filter\":\"\",\"gauge_color_rules\":[{\"id\":\"bb8f92e0-100d-11eb-b605-67b53a677a3b\",\"operator\":\"gte\",\"text\":\"rgba(44,255,0,1)\",\"value\":75},{\"id\":\"da4471b0-100d-11eb-b605-67b53a677a3b\",\"operator\":\"lte\",\"text\":\"rgba(255,0,0,1)\",\"value\":20}],\"gauge_inner_width\":10,\"gauge_max\":\"100\",\"gauge_style\":\"half\",\"gauge_width\":10,\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"\",\"interval\":\"auto\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(142,255,4,1)\",\"fill\":0.5,\"formatter\":\"number\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"State of Charge (%)\",\"line_width\":1,\"metrics\":[{\"field\":\"estSoc\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\"}],\"point_size\":1,\"separate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"eventTimestamp\",\"type\":\"gauge\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "7d05edb0-100a-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "SOH_C",
+      "visState": "{\"title\":\"SOH_C\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(252,196,0,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"estSohC\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":0,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "28e473f0-100a-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "SOC",
+      "visState": "{\"title\":\"SOC\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(22,165,165,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"estSoc\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":0,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "1c7a3720-0fde-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Voltage",
+      "visState": "{\"title\":\"Voltage\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"voltage\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"bmsnodeevent\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":0,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "ab78d6c0-100b-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Voltage_Instant",
+      "visState": "{\"title\":\"Voltage_Instant\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"metric\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"voltage\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Voltage (V)\",\"value_template\":\"{{value}}\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\",\"background_color_rules\":[{\"value\":640,\"id\":\"61583ef0-100b-11eb-b605-67b53a677a3b\",\"color\":\"rgba(255,0,4,1)\",\"operator\":\"lt\"}],\"filter\":\"\",\"bar_color_rules\":[{\"id\":\"a6941040-100e-11eb-b605-67b53a677a3b\"}],\"gauge_color_rules\":[{\"id\":\"a78d8b70-100e-11eb-b605-67b53a677a3b\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "fb8a6d90-100b-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Current_Instant",
+      "visState": "{\"title\":\"Current_Instant\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"metric\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"min\",\"field\":\"current\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Current (A)\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\",\"background_color_rules\":[{\"value\":30,\"id\":\"b80b6010-100b-11eb-b605-67b53a677a3b\",\"color\":\"rgba(245,0,0,1)\",\"operator\":\"gt\"},{\"value\":-30,\"id\":\"da816590-100b-11eb-b605-67b53a677a3b\",\"color\":\"rgba(255,0,0,1)\",\"operator\":\"lt\"}],\"filter\":\"\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "725f2770-100d-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "SOH_R_Instant",
+      "visState": "{\"title\":\"SOH_R_Instant\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"metric\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"estSohR\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"SOH - Resistance (%)\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\",\"background_color_rules\":[{\"value\":90,\"id\":\"3c7e9500-100d-11eb-b605-67b53a677a3b\",\"color\":\"rgba(0,255,0,1)\",\"operator\":\"gte\"},{\"value\":90,\"id\":\"5ff91230-100d-11eb-b605-67b53a677a3b\",\"operator\":\"lt\",\"color\":\"rgba(255,128,0,1)\"}],\"filter\":\"\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "ae98f7f0-100a-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "SOH_R",
+      "visState": "{\"title\":\"SOH_R\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(250,40,255,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"estSohR\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":0,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "01954810-100a-11eb-9e92-b3e67d86061b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Current",
+      "visState": "{\"title\":\"Current\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(123,100,255,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"current\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"eventTimestamp\",\"index_pattern\":\"\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":0,\"show_grid\":1,\"default_index_pattern\":\"bmsnodeevent\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "086f9a20-0ea0-11eb-8082-3bea34c7e01d",
+    "_type": "visualization",
+    "_source": {
+      "title": "Terrible Viz",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"field\":\"estSohC\"},\"schema\":\"metric\",\"type\":\"avg\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"drop_partials\":false,\"extended_bounds\":{},\"field\":\"eventTimestamp\",\"interval\":\"d\",\"min_doc_count\":1,\"timeRange\":{\"from\":\"2020-09-01T04:00:00.000Z\",\"mode\":\"absolute\",\"to\":\"2020-10-15T03:51:30.556Z\"},\"useNormalizedEsInterval\":true},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"estSohR\"},\"schema\":\"metric\",\"type\":\"avg\"},{\"enabled\":true,\"id\":\"4\",\"params\":{\"field\":\"voltage\"},\"schema\":\"metric\",\"type\":\"avg\"}],\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Average estSohC\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":\"true\",\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"},{\"data\":{\"id\":\"3\",\"label\":\"Average estSohR\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"},{\"data\":{\"id\":\"4\",\"label\":\"Average voltage\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"line\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Average estSohC\"},\"type\":\"value\"}]},\"title\":\"Terrible Viz\",\"type\":\"line\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"c2a2de00-0e9d-11eb-8082-3bea34c7e01d\",\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "132fdca0-10de-11eb-93be-af182f67698b",
+    "_type": "visualization",
+    "_source": {
+      "title": "ADAC",
+      "visState": "{\"title\":\"ADAC\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"openLinksInNewTab\":false,\"markdown\":\"![alt text](https://research.ece.ncsu.edu/adac/wp-content/uploads/2019/02/ADACLab_Logo_Red.png)\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "61337b00-10de-11eb-93be-af182f67698b",
+    "_type": "visualization",
+    "_source": {
+      "title": "NCSU Logo",
+      "visState": "{\"title\":\"NCSU Logo\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"openLinksInNewTab\":false,\"markdown\":\"![alt text](https://brand.ncsu.edu/img/logo/brick4x1.jpg)\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "95fa3900-10de-11eb-93be-af182f67698b",
+    "_type": "visualization",
+    "_source": {
+      "title": "NCEMC",
+      "visState": "{\"title\":\"NCEMC\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"openLinksInNewTab\":false,\"markdown\":\"![alt text](https://www.pngkey.com/png/full/448-4485820_hoffman-building-technologies-ncemc-nc-electric-cooperatives-logo.png)\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "2e790220-0ef9-11eb-8082-3bea34c7e01d",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Dashboard V_1",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":0,\"w\":22,\"h\":15,\"i\":\"1\"},\"id\":\"1c7a3720-0fde-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":22,\"y\":0,\"w\":21,\"h\":15,\"i\":\"2\"},\"id\":\"01954810-100a-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":15,\"w\":43,\"h\":16,\"i\":\"3\"},\"id\":\"28e473f0-100a-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":21,\"y\":31,\"w\":22,\"h\":15,\"i\":\"4\"},\"id\":\"ae98f7f0-100a-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":31,\"w\":21,\"h\":15,\"i\":\"5\"},\"id\":\"7d05edb0-100a-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"gridData\":{\"x\":43,\"y\":0,\"w\":5,\"h\":30,\"i\":\"6\"},\"version\":\"6.8.12\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"id\":\"132fdca0-10de-11eb-93be-af182f67698b\",\"embeddableConfig\":{},\"title\":\"\"},{\"gridData\":{\"x\":8,\"y\":46,\"w\":14,\"h\":8,\"i\":\"7\"},\"version\":\"6.8.12\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"id\":\"61337b00-10de-11eb-93be-af182f67698b\",\"embeddableConfig\":{},\"title\":\"\"},{\"gridData\":{\"x\":22,\"y\":46,\"w\":16,\"h\":10,\"i\":\"8\"},\"version\":\"6.8.12\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"id\":\"95fa3900-10de-11eb-93be-af182f67698b\",\"embeddableConfig\":{},\"title\":\"\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"c2a2de00-0e9d-11eb-8082-3bea34c7e01d\",\"key\":\"bmsNode.id\",\"negate\":false,\"params\":{\"query\":1,\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"1\"},\"query\":{\"match\":{\"bmsNode.id\":{\"query\":1,\"type\":\"phrase\"}}}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e924c200-0f51-11eb-8082-3bea34c7e01d",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Front Panel",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"x\":15,\"y\":0,\"w\":17,\"h\":12,\"i\":\"1\"},\"id\":\"987e5440-100c-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":7,\"y\":12,\"w\":17,\"h\":11,\"i\":\"2\"},\"id\":\"ab78d6c0-100b-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":12,\"w\":14,\"h\":11,\"i\":\"3\"},\"id\":\"fb8a6d90-100b-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":7,\"y\":23,\"w\":17,\"h\":12,\"i\":\"4\"},\"id\":\"f7c22580-100c-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":23,\"w\":14,\"h\":12,\"i\":\"5\"},\"id\":\"725f2770-100d-11eb-9e92-b3e67d86061b\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.8.12\"},{\"gridData\":{\"x\":43,\"y\":0,\"w\":5,\"h\":35,\"i\":\"6\"},\"version\":\"6.8.12\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"id\":\"132fdca0-10de-11eb-93be-af182f67698b\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":7,\"y\":35,\"w\":17,\"h\":9,\"i\":\"7\"},\"version\":\"6.8.12\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"id\":\"61337b00-10de-11eb-93be-af182f67698b\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":24,\"y\":35,\"w\":14,\"h\":9,\"i\":\"8\"},\"version\":\"6.8.12\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"id\":\"95fa3900-10de-11eb-93be-af182f67698b\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":true,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  }
+]
